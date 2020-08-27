@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A Simple Cassandra Workbench</title>
+    <script defer type="text/javascript" src="/js/main.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="../css/main.css" rel="stylesheet" />
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .headerDiv {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0px;
+        }
+        .dialogtables {
+            max-height: 40vh;
+            width: 20vw;
+            font-size: 12px;
+            background: #FFFDCD;
+            position: absolute;
+            right: 0;
+            display: none;
+            flex-direction: column;
+            overflow: auto;
+            z-index: 1;
+            border: 1px groove lightgrey;
+        }
+        #tablesDiv:hover .dialogtables {
+            display: flex;
+        }
+        .loader {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            align-self: center;
+            color: white;
+            background: black;
+            opacity: 0.8;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            top: 0;
+            font-size: calc(10px + 2vw);
+        }
+        .message {
+            font-size: calc(5px + 1vw);
+            color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div style="
+        padding: 5px 0px;
+        border-bottom: 1px groove rgba(255, 253, 205, 0.5);
+        font-weight: bold;
+    ">
+        <h3>Cassandra Workbench</h3>
+    </div>
+    <div class="header">
+        <div class="headerDiv">
+            <select id="ddnodes" class="dropdown">
+                <option value="10.0.21.67">10.0.21.67</option>
+                <option value="10.0.21.68">10.0.21.68</option>
+            </select>
+            <span id="nodeMsg" class="message"></span>
+            <div id="tablesDiv">
+                <button id="viewTables" class="submit" >Tables</button>
+                <div id="tableNames" class="dialogtables">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <textarea id="cqlinput" placeholder="Type Cql query here"></textarea>
+        <div>
+            <button id="submitQuery" class="submit"> Submit Query </button>
+        </div>
+        <div id="resultTable" class="tablebody">
+        </div>
+        <div id="qDataLoader" class="loader"> Loading Data </div>
+    </div>
+</div>
+</body>
+</html>

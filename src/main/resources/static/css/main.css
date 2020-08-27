@@ -1,0 +1,91 @@
+body {
+    padding: 5px;
+    margin: 0px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    background: #FFFDCD;
+    height: 100%;
+}
+.container {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+h3 {
+    font-size: calc(5px + 2vw);
+    line-height: 2vh;
+}
+
+.dropdown {
+    height: calc(10px + 2vh);
+    width: calc(130px + 2vw);
+    border-radius: 5px;
+    padding-left: 5px;
+    background: rgba(255, 253, 205, 0.5);
+}
+
+textarea {
+    height: 25vh;
+    width: 100%;
+    resize: none;
+    background: #FFFFFF;
+    opacity: 0.6;
+    border: 5px;
+}
+
+.tablebody {
+    display: inline-grid;
+    width: 100%;
+    overflow: auto;
+    background: #FFFFFF;
+    opacity: 0.6;
+    border: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 50vh;
+    font-size: 12px;
+}
+
+.tablebody .th {
+    display: inline-flex;
+    position: sticky;
+    top: 0;
+    background: white;
+    font-weight: bold;
+    border-bottom: 0.5px groove black;
+}
+
+.tablebody .tr {
+    display: inline-flex;
+    border-bottom: 0.5px groove black;
+}
+
+.tablebody  .td {
+    width: calc(200px + 2vw);
+    padding: 1px 2px;
+    overflow-wrap: anywhere;
+}
+
+.submit {
+    height: calc(15px + 2vh);
+    width: calc(100px + 2vw);
+    margin: 2px;
+    border: 10px;
+    background: dodgerblue;
+    opacity: 0.8;
+    padding: 2px;
+    border-radius: 3px;
+    font-size: calc(3px + 1vw);
+}
+
+.connectToCassandra {
+    height: 100vh;
+    width: 100vw;
+    background: #FFFDCD;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
